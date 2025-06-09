@@ -1,0 +1,95 @@
+@page "/registration"
+@inject IAuthService Api
+@inject NavigationManager NavigationManager
+
+
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow p-4">
+                <EditForm Model="User" FormName="userRegistration" OnValidSubmit="Submit">
+                    <DataAnnotationsValidator />
+                    <h3 class="mb-4 text-center">Registration</h3>
+
+                    <div class="mb-3">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <InputText @bind-Value="User.FirstName" id="firstName" class="form-control" />
+                        <ValidationMessage For="() => User.FirstName" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <InputText @bind-Value="User.LastName" id="lastName" class="form-control" />
+                        <ValidationMessage For="() => User.LastName" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="yearOfBirth" class="form-label">Year Of Birth</label>
+                        <InputNumber @bind-Value="User.YearOfBirth" id="yearOfBirth" class="form-control" />
+                        <ValidationMessage For="() => User.YearOfBirth" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="username" class="form-label">Username</label>
+                        <InputText @bind-Value="User.Username" id="username" class="form-control" />
+                        <ValidationMessage For="() => User.Username" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <InputText @bind-Value="User.Email" id="email" class="form-control" />
+                        <ValidationMessage For="() => User.Email" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <InputText @bind-Value="User.Password" id="password" type="password" class="form-control" />
+                        <ValidationMessage For="() => User.Password" />
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="phoneNumber" class="form-label">Phone Number</label>
+                        <InputText @bind-Value="User.PhoneNumber" id="phoneNumber" type="tel" class="form-control" />
+                        <ValidationMessage For="() => User.PhoneNumber" />
+                    </div>
+                    
+                    
+
+                    <div class="d-grid mb-5">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    @if (ErrorMessages.Any())
+                    {
+                        <ul>
+                            @foreach (var err in ErrorMessages)
+                            {
+                                <li mb-2>@err</li>
+                            }
+                        </ul>
+                    }
+                </EditForm>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private UserRegistrationModel User { get; set; } = new UserRegistrationModel();
+    private List<string> ErrorMessages = new();
+
+    private async Task Submit()
+    {
+        ErrorMessages.Clear();
+        var errors = await Api.RegisterAsync(User);
+
+        if (errors.Any())
+        {
+            ErrorMessages = errors;
+        }
+        else
+        {
+            NavigationManager.NavigateTo("/");
+        }
+    }
+}

@@ -1,0 +1,67 @@
+@page "/login"
+@inject IAuthService Auth
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow p-4">
+                <EditForm Model="User" FormName="userLogin" OnValidSubmit="Submit">
+                    <DataAnnotationsValidator />
+                    <h3 class="mb-4 text-center">Login</h3>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email or Username</label>
+                        <InputText @bind-Value="User.EmailOrUsername" id="email" class="form-control" />
+                        <ValidationMessage For="() => User.EmailOrUsername" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <InputText @bind-Value="User.Password" id="password" type="password" class="form-control" />
+                        <ValidationMessage For="() => User.Password" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="remember" class="form-label">Remember me:</label>
+                        <InputCheckbox @bind-Value="User.RememberMe" id="remember" class="form-check-input" />
+                    </div>
+
+                    <div class="d-grid mb-5">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    @if (ErrorMessages.Any())
+                    {
+                        <ul>
+                            @foreach (var err in ErrorMessages)
+                            {
+                                <li mb-2>@err</li>
+                            }
+                        </ul>
+                    }
+                </EditForm>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private UserLoginModel User { get; set; } = new UserLoginModel();
+    private List<string> ErrorMessages = new();
+
+    private async Task Submit()
+    {
+        ErrorMessages.Clear();
+
+        var errors = await Auth.LoginAsync(User);
+
+        if (errors.Any())
+        {
+            ErrorMessages = errors;
+        }
+        else
+        {
+            // TODO: čuvanje tokena, redirect, toast itd.
+            Console.WriteLine("Login successful!");
+        }
+    }
+}
