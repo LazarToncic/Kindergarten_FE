@@ -4,4 +4,5 @@ public static class ApiRoutes
 {
     public const string UserRegistration = "Auth/UserRegistration";
     public const string UserLogin = "Auth/UserLogin";
+    public const string GenerateRefreshToken = "Auth/GenerateRefreshToken";
 }

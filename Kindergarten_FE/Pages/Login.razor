@@ -1,5 +1,8 @@
 @page "/login"
+@using Kindergarten_FE.Common.Interfaces
 @inject IAuthService Auth
+@inject ITokenStorageService TokenStorageService
+@inject NavigationManager NavigationManager
 
 <div class="container my-5">
     <div class="row justify-content-center">
@@ -52,16 +55,25 @@
     {
         ErrorMessages.Clear();
 
-        var errors = await Auth.LoginAsync(User);
+        var (loginResponse, errors) = await Auth.LoginAsync(User);
 
         if (errors.Any())
         {
             ErrorMessages = errors;
+            return;
         }
-        else
+
+        if (loginResponse != null)
         {
-            // TODO: čuvanje tokena, redirect, toast itd.
-            Console.WriteLine("Login successful!");
+            TokenStorageService.SaveTokens(
+                loginResponse.AccessToken,
+                loginResponse.AccessTokenExpiresAt,
+                loginResponse.RefreshToken,
+                loginResponse.RefreshTokenExpiresAt,
+                User.RememberMe
+            );
         }
+        
+        NavigationManager.NavigateTo("/");
     }
 }
