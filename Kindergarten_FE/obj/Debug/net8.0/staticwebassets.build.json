@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iRAUZzGaRKxuOchCTI/4N3BHPeDrnb1g9bFQvi56fWE=",
+  "Hash": "swjOdtQaonSsgTCwbGCIEr87Acabod2PIjYybm+8FyU=",
   "Source": "Kindergarten_FE",
   "BasePath": "/",
   "Mode": "Root",
@@ -71,7 +71,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.16\\runtimes\\browser-wasm\\native\\dotnet.js"
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.17\\runtimes\\browser-wasm\\native\\dotnet.js"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
@@ -90,15 +90,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.16\\runtimes\\browser-wasm\\native\\dotnet.js.map"
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.17\\runtimes\\browser-wasm\\native\\dotnet.js.map"
     },
     {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.16.fuq88cjj71.js",
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.17.0uxd8lrvu6.js",
       "SourceId": "Kindergarten_FE",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.16.fuq88cjj71.js",
+      "RelativePath": "_framework/dotnet.native.8.0.17.0uxd8lrvu6.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,7 +109,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.16\\runtimes\\browser-wasm\\native\\dotnet.native.js"
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.17\\runtimes\\browser-wasm\\native\\dotnet.native.js"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
@@ -128,15 +128,15 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.16\\runtimes\\browser-wasm\\native\\dotnet.native.wasm"
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.17\\runtimes\\browser-wasm\\native\\dotnet.native.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.16.x8r4y6oa8j.js",
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.17.u32fw8jz51.js",
       "SourceId": "Kindergarten_FE",
       "SourceType": "Computed",
       "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.16.x8r4y6oa8j.js",
+      "RelativePath": "_framework/dotnet.runtime.8.0.17.u32fw8jz51.js",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -147,7 +147,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.16\\runtimes\\browser-wasm\\native\\dotnet.runtime.js"
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.17\\runtimes\\browser-wasm\\native\\dotnet.runtime.js"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
@@ -166,7 +166,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.16\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.17\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
@@ -185,7 +185,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.16\\runtimes\\browser-wasm\\native\\icudt_CJK.dat"
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.17\\runtimes\\browser-wasm\\native\\icudt_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
@@ -204,7 +204,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.16\\runtimes\\browser-wasm\\native\\icudt_EFIGS.dat"
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.17\\runtimes\\browser-wasm\\native\\icudt_EFIGS.dat"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
@@ -223,7 +223,7 @@
       "AssetTraitValue": "native",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.16\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.17\\runtimes\\browser-wasm\\native\\icudt_no_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Kindergarten_FE.pdb",
@@ -4102,6 +4102,25 @@
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm"
     },
     {
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\0uxd8lrvu6.gz",
+      "SourceId": "Kindergarten_FE",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.native.8.0.17.0uxd8lrvu6.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.17.0uxd8lrvu6.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.17.0uxd8lrvu6.js"
+    },
+    {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\0v0rex4znl.gz",
       "SourceId": "Kindergarten_FE",
       "SourceType": "Computed",
@@ -4425,6 +4444,25 @@
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Runtime.Serialization.Xml.wasm"
     },
     {
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\2m2wiss9br.gz",
+      "SourceId": "Kindergarten_FE",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
+    },
+    {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\2nv8z95fc6.gz",
       "SourceId": "Kindergarten_FE",
       "SourceType": "Computed",
@@ -4461,25 +4499,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.IO.Compression.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\2r4vhog94l.gz",
-      "SourceId": "Kindergarten_FE",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\2uidrsfifd.gz",
@@ -5109,25 +5128,6 @@
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.VisualBasic.Core.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\818ey8g4ei.gz",
-      "SourceId": "Kindergarten_FE",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_no_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
-    },
-    {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\8jl3sezoum.gz",
       "SourceId": "Kindergarten_FE",
       "SourceType": "Computed",
@@ -5164,6 +5164,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.IdentityModel.Tokens.Jwt.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\99eu9w8fyj.gz",
+      "SourceId": "Kindergarten_FE",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.native.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\9ipuyj5x1j.gz",
@@ -5432,25 +5451,6 @@
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.Http.Json.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\btz8hxiv1x.gz",
-      "SourceId": "Kindergarten_FE",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
-    },
-    {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\bxb32ua40c.gz",
       "SourceId": "Kindergarten_FE",
       "SourceType": "Computed",
@@ -5506,6 +5506,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Resources.ResourceManager.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\c3w07u1bsj.gz",
+      "SourceId": "Kindergarten_FE",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_CJK.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\ca4ic77l55.gz",
@@ -5639,6 +5658,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.ValueTuple.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\dufqdbzpj6.gz",
+      "SourceId": "Kindergarten_FE",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\e0nyghh5lq.gz",
@@ -5850,25 +5888,6 @@
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Formats.Tar.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\fuq88cjj71.gz",
-      "SourceId": "Kindergarten_FE",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.8.0.16.fuq88cjj71.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.16.fuq88cjj71.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.8.0.16.fuq88cjj71.js"
-    },
-    {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\fveyapdap7.gz",
       "SourceId": "Kindergarten_FE",
       "SourceType": "Computed",
@@ -5943,25 +5962,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\gxgor16x9x.gz",
-      "SourceId": "Kindergarten_FE",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\h3hogpvcqb.gz",
@@ -6420,6 +6420,25 @@
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Text.Encoding.Extensions.wasm"
     },
     {
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\komreidw2q.gz",
+      "SourceId": "Kindergarten_FE",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.js.map"
+    },
+    {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\ks43uk58fr.gz",
       "SourceId": "Kindergarten_FE",
       "SourceType": "Computed",
@@ -6456,6 +6475,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Collections.Concurrent.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\l3s0sx43jz.gz",
+      "SourceId": "Kindergarten_FE",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\l7ucloy2oh.gz",
@@ -6665,6 +6703,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\ntr5jjdk4i.gz",
+      "SourceId": "Kindergarten_FE",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.js.map.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.js.map"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\o1xvhk1779.gz",
@@ -7275,6 +7332,25 @@
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Numerics.wasm"
     },
     {
+      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\u32fw8jz51.gz",
+      "SourceId": "Kindergarten_FE",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/dotnet.runtime.8.0.17.u32fw8jz51.js.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.17.u32fw8jz51.js",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.17.u32fw8jz51.js"
+    },
+    {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\u4fgaruqal.gz",
       "SourceId": "Kindergarten_FE",
       "SourceType": "Computed",
@@ -7349,44 +7425,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Net.WebClient.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\ukbt7a55xx.gz",
-      "SourceId": "Kindergarten_FE",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_CJK.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_CJK.dat"
-    },
-    {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\uyeicx73se.gz",
-      "SourceId": "Kindergarten_FE",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.native.wasm.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.native.wasm"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\v2my67gfem.gz",
@@ -7579,25 +7617,6 @@
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.Serialization.wasm"
     },
     {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\wk8tyqzf4s.gz",
-      "SourceId": "Kindergarten_FE",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/icudt_EFIGS.dat.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\icudt_EFIGS.dat"
-    },
-    {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\wlvv8nfotj.gz",
       "SourceId": "Kindergarten_FE",
       "SourceType": "Computed",
@@ -7672,25 +7691,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Xml.XmlSerializer.wasm"
-    },
-    {
-      "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\x8r4y6oa8j.gz",
-      "SourceId": "Kindergarten_FE",
-      "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/dotnet.runtime.8.0.16.x8r4y6oa8j.js.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "AssetMergeBehavior": "",
-      "AssetMergeSource": "",
-      "RelatedAsset": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.16.x8r4y6oa8j.js",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\bin\\Debug\\net8.0\\wwwroot\\_framework\\dotnet.runtime.8.0.16.x8r4y6oa8j.js"
     },
     {
       "Identity": "C:\\Users\\User\\RiderProjects\\Kindergarten_FE\\Kindergarten_FE\\obj\\Debug\\net8.0\\compressed\\xat9xtai35.gz",

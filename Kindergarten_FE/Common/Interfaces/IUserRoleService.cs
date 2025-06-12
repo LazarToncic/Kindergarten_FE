@@ -2,6 +2,6 @@ namespace Kindergarten_FE.Common.Interfaces;
 
 public interface IUserRoleService
 {
-    IEnumerable<string> GetRoles();
-    bool HasRole(string role);
+    Task<IEnumerable<string>> GetRolesAsync();
+    Task<bool> HasRoleAsync(string role);
 }

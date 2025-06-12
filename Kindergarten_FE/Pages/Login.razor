@@ -3,6 +3,7 @@
 @inject IAuthService Auth
 @inject ITokenStorageService TokenStorageService
 @inject NavigationManager NavigationManager
+@inject IAuthStateService AuthStateService
 
 <div class="container my-5">
     <div class="row justify-content-center">
@@ -37,7 +38,7 @@
                         <ul>
                             @foreach (var err in ErrorMessages)
                             {
-                                <li mb-2>@err</li>
+                                <li class="mb-2">@err</li>
                             }
                         </ul>
                     }
@@ -65,13 +66,14 @@
 
         if (loginResponse != null)
         {
-            TokenStorageService.SaveTokens(
+            await TokenStorageService.SaveTokensAsync(
                 loginResponse.AccessToken,
                 loginResponse.AccessTokenExpiresAt,
                 loginResponse.RefreshToken,
                 loginResponse.RefreshTokenExpiresAt,
                 User.RememberMe
             );
+            await AuthStateService.NotifyAuthChanged();
         }
         
         NavigationManager.NavigateTo("/");

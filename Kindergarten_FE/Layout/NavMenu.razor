@@ -2,6 +2,7 @@
 @using Kindergarten_FE.Common.Interfaces
 @inject ITokenStorageService TokenStorage
 @inject IUserRoleService UserRoleService
+@inject IAuthStateService AuthStateService
 
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
@@ -47,13 +48,21 @@
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
     private bool ShouldShowCreateParentRequest = false;
 
-    protected override void OnInitialized()
+    protected override async Task OnInitializedAsync()
     {
-        var token = TokenStorage.GetAccessToken();
-        if (!string.IsNullOrEmpty(token))
-        {
-            ShouldShowCreateParentRequest = UserRoleService.HasRole(RoleExtensions.Parent);
-        }
+        AuthStateService.OnAuthStateChanged += RefreshNav;
+        await RefreshNav();
+    }
+    
+    private async Task RefreshNav()
+    {
+        ShouldShowCreateParentRequest = await UserRoleService.HasRoleAsync(RoleExtensions.Parent);
+        StateHasChanged();
+    }
+
+    public void Dispose()
+    {
+        AuthStateService.OnAuthStateChanged -= RefreshNav;
     }
 
     private void ToggleNavMenu()

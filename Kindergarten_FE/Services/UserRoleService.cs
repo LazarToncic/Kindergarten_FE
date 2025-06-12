@@ -6,22 +6,32 @@ namespace Kindergarten_FE.Services;
 
 public class UserRoleService(ITokenStorageService tokenStorageService) : IUserRoleService
 {
-    public IEnumerable<string> GetRoles()
+    public async Task<IEnumerable<string>> GetRolesAsync()
     {
-        var token = tokenStorageService.GetAccessToken();
+        var token = await tokenStorageService.GetAccessTokenAsync();
         if (string.IsNullOrEmpty(token))
             return Enumerable.Empty<string>();
 
         var handler = new JwtSecurityTokenHandler();
         var jwt = handler.ReadJwtToken(token);
+        
+        var roles = jwt.Claims
+            .Where(c => c.Type == ClaimTypes.Role || c.Type == "role")
+            .Select(c => c.Value);
+        
+        foreach (var r in roles)
+        {
+            Console.WriteLine("Found role: " + r);
+        }
 
         return jwt.Claims
             .Where(x => x.Type == ClaimTypes.Role || x.Type == "role")
             .Select(x => x.Value);
     }
 
-    public bool HasRole(string role)
+    public async Task<bool> HasRoleAsync(string role)
     {
-        return GetRoles().Contains(role, StringComparer.OrdinalIgnoreCase);
+        var roles = await GetRolesAsync();
+        return roles.Contains(role, StringComparer.OrdinalIgnoreCase);
     }
 }

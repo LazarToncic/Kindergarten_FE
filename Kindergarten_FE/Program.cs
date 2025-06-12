@@ -12,14 +12,18 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenStorageService, TokenStorageService>();
 builder.Services.AddScoped<IUserRoleService, UserRoleService>();
+builder.Services.AddScoped<IAuthStateService, AuthStateService>();
 
 builder.Services.AddScoped<TokenRefreshHandler>();
 
+var baseAddress = new Uri("https://localhost:44309/");
+
 builder.Services.AddScoped(sp =>
 {
-    var baseAddress = new Uri(builder.HostEnvironment.BaseAddress);
+    var refreshHandler = sp.GetRequiredService<TokenRefreshHandler>();
+    refreshHandler.InnerHandler = new HttpClientHandler(); // ← OVO JE KLJUČNO!
 
-    return new HttpClient(sp.GetRequiredService<TokenRefreshHandler>())
+    return new HttpClient(refreshHandler)
     {
         BaseAddress = baseAddress
     };

@@ -1,15 +1,15 @@
 {
   "mainAssemblyName": "Kindergarten_FE",
   "resources": {
-    "hash": "sha256-GibGe3oqmRp0axuc4TO10e/skzB+DCckcmZ7YCddlhY=",
+    "hash": "sha256-HSkNAmeR4u2jcdG/x1h3Hn1n9wKq8P99us/VO8zvHrU=",
     "jsModuleNative": {
-      "dotnet.native.8.0.16.fuq88cjj71.js": "sha256-RiGT44TFZmHOY+Oqvb8o8r+BJVWex6+dPxFxrOiWvFY="
+      "dotnet.native.8.0.17.0uxd8lrvu6.js": "sha256-YyxJV6dv935qHoQAmjB+2qRjHeGpm4SyWxE0T/KvsIE="
     },
     "jsModuleRuntime": {
-      "dotnet.runtime.8.0.16.x8r4y6oa8j.js": "sha256-t76BRXwt7ie+t1popBz8/uUmIQCWeGU9XALjF0psLNw="
+      "dotnet.runtime.8.0.17.u32fw8jz51.js": "sha256-nlm9ZX+9Z8SHWuCfVhHT5pkK9QzTgBn3opfL6mMas20="
     },
     "wasmNative": {
-      "dotnet.native.wasm": "sha256-UiaFtxLHzlxisuBqZWMdl4IYCuHWyjZuv8yURy9ZnqQ="
+      "dotnet.native.wasm": "sha256-Ni0Zae8QxYDdca2Vx+9v/wRw4wb3jSGA6suhCmG04n8="
     },
     "icu": {
       "icudt_CJK.dat": "sha256-SZLtQnRc0JkwqHab0VUVP7T3uBPSeYzxzDnpxPpUnHk=",
@@ -213,10 +213,10 @@
       "mscorlib.wasm": "sha256-Im6xq+lOse4P/VnAyrA3hwPstV67V5dB0EwQWcjipyE=",
       "netstandard.wasm": "sha256-PK0GLtj6kQVtZPzq0FZlnSdHh7geujg80LqKdJXA4pI=",
       "System.Private.CoreLib.wasm": "sha256-gEwccs7GbRSPGmeWBOKxNroYfyM+mZ7hqbP3ki1iwX0=",
-      "Kindergarten_FE.wasm": "sha256-JT0iasBTivANdOKcOtjZDHiMOUtBMgxCx5DcEK43Mrk="
+      "Kindergarten_FE.wasm": "sha256-Gnyn48MbIk1Gw/vNmEkzOr1Sm7ohyI1JpIikKDz8fqo="
     },
     "pdb": {
-      "Kindergarten_FE.pdb": "sha256-YLyK5Ta42Bosdpw957a2bv5RnOoTSyebXDc2l7iJxDc="
+      "Kindergarten_FE.pdb": "sha256-wV+jrXDkkMf2cuhqII8983LoutbsG25hkswtHQ8gzgw="
     }
   },
   "cacheBootResources": true,
