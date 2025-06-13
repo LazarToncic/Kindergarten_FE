@@ -34,4 +34,18 @@ public class UserRoleService(ITokenStorageService tokenStorageService) : IUserRo
         var roles = await GetRolesAsync();
         return roles.Contains(role, StringComparer.OrdinalIgnoreCase);
     }
+
+    public async Task<bool> HasAnyRoleAsync()
+    {
+        var token = await tokenStorageService.GetAccessTokenAsync();
+
+        if (string.IsNullOrWhiteSpace(token))
+            return false;
+
+        var handler = new JwtSecurityTokenHandler();
+        var jwt = handler.ReadJwtToken(token);
+
+        var roles = jwt.Claims.Where(c => c.Type == ClaimTypes.Role || c.Type == "role").Select(c => c.Value);
+        return roles.Any();
+    }
 }

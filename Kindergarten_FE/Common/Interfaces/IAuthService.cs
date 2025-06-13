@@ -8,4 +8,5 @@ public interface IAuthService
     Task<List<string>> RegisterAsync(UserRegistrationModel user);
 
     Task<(LoginResponseDto? Data, List<string> Errors)> LoginAsync(UserLoginModel user);
+    Task LogoutAsync();
 }

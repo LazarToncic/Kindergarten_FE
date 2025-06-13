@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "Kindergarten_FE",
   "resources": {
-    "hash": "sha256-s57X0B0OhLuOOzQZrva8s7aIMnF0JVCpztWUxQzhOJI=",
+    "hash": "sha256-nngxMnwk18/ZqGz82LfR91eOP8iPK4E+kKbRZ1wAD2Y=",
     "jsModuleNative": {
       "dotnet.native.8.0.17.0uxd8lrvu6.js": "sha256-YyxJV6dv935qHoQAmjB+2qRjHeGpm4SyWxE0T/KvsIE="
     },
@@ -213,10 +213,10 @@
       "mscorlib.wasm": "sha256-Im6xq+lOse4P/VnAyrA3hwPstV67V5dB0EwQWcjipyE=",
       "netstandard.wasm": "sha256-PK0GLtj6kQVtZPzq0FZlnSdHh7geujg80LqKdJXA4pI=",
       "System.Private.CoreLib.wasm": "sha256-gEwccs7GbRSPGmeWBOKxNroYfyM+mZ7hqbP3ki1iwX0=",
-      "Kindergarten_FE.wasm": "sha256-wjR2+ygY4M7v4r8k4DX7NYSp2u+YUl+Dd33sUg57M+8="
+      "Kindergarten_FE.wasm": "sha256-vMV3Y+5KgnPVchwpULbLsjI22ZrIS0Aj5YZx54/OuZs="
     },
     "pdb": {
-      "Kindergarten_FE.pdb": "sha256-HmABgRf770qniwWlvkF9/758HIfyJAZvIn2eUSJu7mg="
+      "Kindergarten_FE.pdb": "sha256-/isDkK1jM1x6jVJcXEkdXui3GV4/XijVhLbG+55jZzI="
     }
   },
   "cacheBootResources": true,
