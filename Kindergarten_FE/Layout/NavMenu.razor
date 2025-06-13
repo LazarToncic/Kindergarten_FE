@@ -1,8 +1,8 @@
 ﻿@using Kindergarten_FE.Common.Extensions
-@using Kindergarten_FE.Common.Interfaces
 @inject ITokenStorageService TokenStorage
 @inject IUserRoleService UserRoleService
 @inject IAuthStateService AuthStateService
+@inject IAuthService AuthService
 
 <div class="top-row ps-3 navbar navbar-dark">
     <div class="container-fluid">
@@ -38,6 +38,15 @@
                 </NavLink>
             </div>
         }
+
+        @if (IsLoggedIn)
+        {
+            <div class="nav-item px-3">
+                <button class="nav-link btn btn-link" @onclick="Logout">
+                    <span class="bi bi-box-arrow-right" aria-hidden="true"></span> Logout
+                </button>
+            </div>
+        }
         
     </nav>
 </div>
@@ -47,6 +56,7 @@
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
     private bool ShouldShowCreateParentRequest = false;
+    private bool IsLoggedIn = false;
 
     protected override async Task OnInitializedAsync()
     {
@@ -57,6 +67,7 @@
     private async Task RefreshNav()
     {
         ShouldShowCreateParentRequest = await UserRoleService.HasRoleAsync(RoleExtensions.Parent);
+        IsLoggedIn = await UserRoleService.HasAnyRoleAsync();
         StateHasChanged();
     }
 
@@ -68,6 +79,11 @@
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+    
+    private async Task Logout()
+    {
+        await AuthService.LogoutAsync();
     }
 
 }
