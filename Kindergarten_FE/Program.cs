@@ -13,6 +13,8 @@ builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ITokenStorageService, TokenStorageService>();
 builder.Services.AddScoped<IUserRoleService, UserRoleService>();
 builder.Services.AddScoped<IAuthStateService, AuthStateService>();
+builder.Services.AddScoped<ITokenRefreshService, TokenRefreshService>();
+builder.Services.AddScoped<IAppAuthInitializerService, AppAuthInitializerService>();
 
 builder.Services.AddScoped<TokenRefreshHandler>();
 
