@@ -7,4 +7,5 @@ public static class ApiRoutes
     public const string UserLogin = "Auth/UserLogin";
     public const string GenerateRefreshToken = "Auth/GenerateRefreshToken";
     public const string UserLogout = "Auth/UserLogout";
+    public const string GetKindergartenNamesAndIds = "Kindergarten/GetKindergartensInf";
 }

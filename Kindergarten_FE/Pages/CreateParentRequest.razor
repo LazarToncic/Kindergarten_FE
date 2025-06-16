@@ -1,0 +1,136 @@
+@page "/CreateParentRequest"
+@inject IKindergartenService KindergartenService
+@inject IParentRequestService ParentRequestService
+
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow p-4">
+                <EditForm Model="ParentRequest" FormName="createParentRequest" OnValidSubmit="Submit">
+                    <DataAnnotationsValidator />
+                    <h3 class="mb-4 text-center">Registration</h3>
+
+                    <div class="mb-3">
+                        <label for="childNumber" class="form-label">Number of Children</label>
+                        <InputNumber @bind-Value="ParentRequest.NumberOfChildren" id="childNumber" class="form-control" />
+                        <ValidationMessage For="() => ParentRequest.NumberOfChildren" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="info" class="form-label">Additional Info</label>
+                        <InputText @bind-Value="ParentRequest.AdditionalInfo" id="info" class="form-control" />
+                        <ValidationMessage For="() => ParentRequest.AdditionalInfo" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Relationship</label>
+                        <InputRadioGroup @bind-Value="ParentRequest.ParentChildRelationship" class="form-check">
+                            <InputRadio Value="ParentChildRelationship.Mother" /> Mother
+                            <InputRadio Value="ParentChildRelationship.Father" /> Father
+                        </InputRadioGroup>
+                        <ValidationMessage For="() => ParentRequest.ParentChildRelationship" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="preferredKindergarten" class="form-label">Preferred Kindergarten</label>
+                        <InputSelect @bind-Value="ParentRequest.PreferredKindergarten" id="preferredKindergarten" class="form-select">
+                            <option value="">-- Select Kindergarten --</option>
+                            @foreach (var kg in KindergartenList)
+                            {
+                                <option value="@kg.Id">@kg.Name</option>
+                            }
+                        </InputSelect>
+                        <ValidationMessage For="() => ParentRequest.PreferredKindergarten" />
+                    </div>
+
+                    @if (Children.Count > 0)
+                    {
+                        @for (int i = 0; i < Children.Count; i++)
+                        {
+                            var child = Children[i];
+
+                            <div @key="child" class="card p-3 mb-4">
+                                <h5>Child @(i + 1)</h5>
+
+                                <InputText @bind-Value="child.FirstName" placeholder="First Name" class="form-control mb-2" />
+                                <InputText @bind-Value="child.LastName"  placeholder="Last Name"  class="form-control mb-2" />
+                                <InputDate @bind-Value="child.DateOfBirth" class="form-control mb-2" />
+
+                                <div class="form-check mb-2">
+                                    <InputCheckbox @bind-Value="child.HasAllergies" class="form-check-input" />
+                                    <label class="form-check-label">Has Allergies</label>
+                                </div>
+                                @if (child.HasAllergies)
+                                {
+                                    <InputText @bind-Value="child.AllergiesString"
+                                               placeholder="Comma-separated allergies"
+                                               class="form-control mb-2" />
+                                }
+
+                                <div class="form-check mb-2">
+                                    <InputCheckbox @bind-Value="child.HasMedicalIssues" class="form-check-input" />
+                                    <label class="form-check-label">Has Medical Issues</label>
+                                </div>
+                                @if (child.HasMedicalIssues)
+                                {
+                                    <InputText @bind-Value="child.MedicalConditionsString"
+                                               placeholder="Comma-separated conditions"
+                                               class="form-control mb-2" />
+                                }
+                                
+                            </div>
+                        }
+
+                        <button type="button" class="btn btn-outline-primary mb-4" @onclick="AddChild">
+                            + Add Child
+                        </button>
+                    }
+                    <div class="d-grid mb-5">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </EditForm>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@code {
+    ParentRequestModel ParentRequest { get; set; } = new();
+    private List<KindergartenFroFormModel> KindergartenList { get; set; } = new();
+    private List<ChildModel> Children = new();
+    
+    List<string> childrenAllergiesStrings = new();
+    List<string> childrenMedicalStrings = new();
+
+    protected override async Task OnInitializedAsync()
+    {
+        KindergartenList = await KindergartenService.GetAllKindergartenNames();
+        Children.Add(new ChildModel());
+    }
+    
+    private void AddChild()
+    {
+        Children.Add(new ChildModel());
+    }
+
+    private Task Submit()
+    {
+        foreach (var child in Children)
+        {
+            if (child.HasAllergies)
+                child.Allergies = child.AllergiesString
+                    .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(s => s.Trim())
+                    .ToList();
+
+            if (child.HasMedicalIssues)
+                child.MedicalConditions = child.MedicalConditionsString
+                    .Split(',', StringSplitOptions.RemoveEmptyEntries)
+                    .Select(s => s.Trim())
+                    .ToList();
+        }
+        
+        return Task.CompletedTask;
+    }
+}
