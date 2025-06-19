@@ -16,6 +16,8 @@ builder.Services.AddScoped<IAuthStateService, AuthStateService>();
 builder.Services.AddScoped<ITokenRefreshService, TokenRefreshService>();
 builder.Services.AddScoped<IAppAuthInitializerService, AppAuthInitializerService>();
 builder.Services.AddScoped<IKindergartenService, KindergartenService>();
+builder.Services.AddScoped<IParentRequestService, ParentRequestService>();
+
 
 builder.Services.AddScoped<TokenRefreshHandler>();
 

@@ -1,0 +1,157 @@
+@page "/ParentRequests"
+@using Kindergarten_FE.Common.ApiRoutes
+@using System.Drawing
+@inject IKindergartenService KindergartenService
+@inject IParentRequestService ParentRequestService
+@inject NavigationManager Nav
+
+
+<RadzenCard Style="margin:1rem; width:100%" Header="Pretraga parent zahteva">
+
+  <!-- Dodali smo TItem="GetParentRequestQueryModel" -->
+  <RadzenTemplateForm TItem="GetParentRequestQueryModel"
+                      Data="@Query"
+                      Submit="@OnSearch">
+    <RadzenRow Gutter="20">
+      <RadzenColumn SizeXS="12" SizeSM="6" SizeMD="3">
+        <RadzenTextBox @bind-Value="Query.FirstName"
+                       Placeholder="Parent First Name"
+                       Style="width:100%" />
+      </RadzenColumn>
+      <RadzenColumn SizeXS="12" SizeSM="6" SizeMD="3">
+        <RadzenTextBox @bind-Value="Query.LastName"
+                       Placeholder="Parent Last Name"
+                       Style="width:100%" />
+      </RadzenColumn>
+      <RadzenColumn SizeXS="12" SizeSM="6" SizeMD="4">
+        <RadzenDropDown @bind-Value="Query.KindergartenId"
+                        Data="Kindergartens"
+                        TextProperty="Name"
+                        ValueProperty="Id"
+                        Placeholder="Kindergarten"
+                        Style="width:100%" />
+      </RadzenColumn>
+      <RadzenColumn SizeXS="12" SizeSM="6" SizeMD="4">
+        <RadzenDropDown @bind-Value="Query.IsOnlineApproved"
+                        Data="OnlineOptions"
+                        TextProperty="Text"
+                        ValueProperty="Value"
+                        Placeholder="Online Approved?"
+                        Style="width:100%" />
+      </RadzenColumn>
+      <RadzenColumn SizeXS="12" SizeSM="6" SizeMD="4">
+        <RadzenDropDown @bind-Value="Query.IsInPersonApproved"
+                        Data="OnlineOptions"
+                        TextProperty="Text"
+                        ValueProperty="Value"
+                        Placeholder="In Person Approved?"
+                        Style="width:100%" />
+      </RadzenColumn>
+      <RadzenColumn SizeXS="12" SizeSM="6" SizeMD="4" Style="display:flex;align-items:flex-end;">
+        <RadzenButton Text="Search"
+                      Icon="search"
+                      ButtonStyle="ButtonStyle.Primary"
+                      Type="Submit"
+                      Style="width:100%" />
+      </RadzenColumn>
+    </RadzenRow>
+  </RadzenTemplateForm>
+
+  
+    <!-- DESKTOP TABELA -->
+    <div class="desktop-only" style="margin-top:1rem;">
+      <RadzenDataGrid Data="@Items"
+                      TItem="GetParentRequestSingleChildResponseModel"
+                      AllowPaging="false"
+                      Style="width:100%;">
+        <Columns>
+          <RadzenDataGridColumn Width="80px" Title=" ">
+            <Template Context="item">
+              <RadzenButton Icon="edit"
+                            Size="ButtonSize.Small"
+                            ButtonStyle="ButtonStyle.Primary"
+                            Click="@(() => NavigateToEdit(item.Id))" />
+            </Template>
+          </RadzenDataGridColumn>
+          <RadzenDataGridColumn Property="FirstName"    Title="First Name" />
+          <RadzenDataGridColumn Property="LastName"     Title="Last Name" />
+          <RadzenDataGridColumn Property="Email"        Title="Email" />
+          <RadzenDataGridColumn Property="PhoneNumber"  Title="Phone" />
+          <RadzenDataGridColumn Property="KindergartenName" Title="Kindergarten" />
+          <RadzenDataGridColumn Property="ParentChildRelationship" Title="Relation" />
+          <RadzenDataGridColumn Property="CreatedAt"    Title="Submitted" FormatString="{0:g}" />
+        </Columns>
+      </RadzenDataGrid>
+    </div>
+
+    <!-- MOBILNE KARTICE -->
+    <div class="mobile-only mobile-cards">
+      <RadzenStack Orientation="Orientation.Vertical" Gap="1rem">
+        @foreach (var item in Items)
+        {
+          <RadzenCard Style="padding:1rem">
+            <div><strong>First Name:</strong> @item.FirstName</div>
+            <div><strong>Last Name:</strong> @item.LastName</div>
+            <div><strong>Email:</strong> @item.Email</div>
+            <div><strong>Phone:</strong> @item.PhoneNumber</div>
+            <div><strong>Kindergarten:</strong> @item.KindergartenName</div>
+            <div><strong>Relation:</strong> @item.ParentChildRelationship</div>
+            <div><strong>Submitted:</strong> @item.CreatedAt:g</div>
+            <h5 style="margin-top:0.5rem">Children:</h5>
+            <ul>
+              @foreach (var c in item.ChildrenJson)
+              {
+                <li>@c.FirstName @c.LastName (@c.DateOfBirth:d)</li>
+              }
+            </ul>
+            <RadzenButton Text="Edit"
+                          Icon="edit"
+                          ButtonStyle="ButtonStyle.Primary"
+                          Click="@(() => NavigateToEdit(item.Id))"
+                          Style="margin-top:0.5rem" />
+          </RadzenCard>
+        }
+      </RadzenStack>
+    </div>
+</RadzenCard>
+
+@code {
+  // ovo je tvoj filter-model
+  private GetParentRequestQueryModel Query = new GetParentRequestQueryModel
+  {
+    FirstName          = null,
+    LastName           = null,
+    KindergartenId     = Guid.Empty,
+    IsOnlineApproved   = null,
+    IsInPersonApproved = null
+  };
+
+  // data source za grid
+  private List<GetParentRequestSingleChildResponseModel> Items = new();
+
+  // dropdown izvori
+  private List<KindergartenFroFormModel> Kindergartens = new();
+  private List<BoolOption>               OnlineOptions = new()
+  {
+    new BoolOption { Value = true,  Text = "Yes" },
+    new BoolOption { Value = false, Text = "No"  }
+  };
+
+  protected override async Task OnInitializedAsync()
+  {
+    Kindergartens = await KindergartenService.GetAllKindergartenNames();
+  }
+
+  
+  private async Task OnSearch(GetParentRequestQueryModel model)
+  {
+    Query = model;
+    Items = await ParentRequestService.GetParentRequestsAsync(Query);
+    StateHasChanged();
+  }
+  
+  void NavigateToEdit(Guid id)
+  {
+    Nav.NavigateTo($"{ApiRoutes.EditParentRequest}/{id}");
+  }
+}
