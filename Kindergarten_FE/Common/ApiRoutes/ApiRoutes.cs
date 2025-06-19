@@ -8,4 +8,7 @@ public static class ApiRoutes
     public const string GenerateRefreshToken = "Auth/GenerateRefreshToken";
     public const string UserLogout = "Auth/UserLogout";
     public const string GetKindergartenNamesAndIds = "Kindergarten/GetKindergartensInf";
+    public const string SendParentRequest = "Parent/SendParentRequest";
+    public const string GetParentRequests = "Parent/GetParentRequests";
+    public const string EditParentRequest = "Parent/ParentRequests/Edit/";
 }

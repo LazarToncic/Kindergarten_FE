@@ -1,13 +1,15 @@
 @page "/CreateParentRequest"
 @inject IKindergartenService KindergartenService
 @inject IParentRequestService ParentRequestService
+@inject NavigationManager NavigationManager
 
 <div class="container my-5">
     <div class="row justify-content-center">
         <div class="col-md-6">
             <div class="card shadow p-4">
-                <EditForm Model="ParentRequest" FormName="createParentRequest" OnValidSubmit="Submit">
+                <EditForm Model="ParentRequest" FormName="createParentRequest" OnValidSubmit="Submit" OnInvalidSubmit="HandleInvalid">
                     <DataAnnotationsValidator />
+                    <ValidationSummary />
                     <h3 class="mb-4 text-center">Registration</h3>
 
                     <div class="mb-3">
@@ -37,17 +39,17 @@
                             <option value="">-- Select Kindergarten --</option>
                             @foreach (var kg in KindergartenList)
                             {
-                                <option value="@kg.Id">@kg.Name</option>
+                                <option value="@kg.Name">@kg.Name</option>
                             }
                         </InputSelect>
                         <ValidationMessage For="() => ParentRequest.PreferredKindergarten" />
                     </div>
 
-                    @if (Children.Count > 0)
+                    @if (ParentRequest.Children.Count > 0)
                     {
-                        @for (int i = 0; i < Children.Count; i++)
+                        @for (int i = 0; i < ParentRequest.Children.Count; i++)
                         {
-                            var child = Children[i];
+                            var child = ParentRequest.Children[i];
 
                             <div @key="child" class="card p-3 mb-4">
                                 <h5>Child @(i + 1)</h5>
@@ -98,7 +100,6 @@
 @code {
     ParentRequestModel ParentRequest { get; set; } = new();
     private List<KindergartenFroFormModel> KindergartenList { get; set; } = new();
-    private List<ChildModel> Children = new();
     
     List<string> childrenAllergiesStrings = new();
     List<string> childrenMedicalStrings = new();
@@ -106,17 +107,17 @@
     protected override async Task OnInitializedAsync()
     {
         KindergartenList = await KindergartenService.GetAllKindergartenNames();
-        Children.Add(new ChildModel());
+        ParentRequest.Children.Add(new ChildModel());
     }
     
     private void AddChild()
     {
-        Children.Add(new ChildModel());
+        ParentRequest.Children.Add(new ChildModel());
     }
 
-    private Task Submit()
+    private async Task Submit()
     {
-        foreach (var child in Children)
+        foreach (var child in ParentRequest.Children)
         {
             if (child.HasAllergies)
                 child.Allergies = child.AllergiesString
@@ -131,6 +132,18 @@
                     .ToList();
         }
         
-        return Task.CompletedTask;
+
+        await ParentRequestService.CreateParentRequest(ParentRequest.NumberOfChildren, ParentRequest.ParentChildRelationship,
+            ParentRequest.AdditionalInfo, ParentRequest.PreferredKindergarten, ParentRequest.Children);
+        
+        NavigationManager.NavigateTo("/");
+    }
+    
+    private void HandleInvalid(EditContext ctx)
+    {
+        // Odatle možeš logovati sve poruke:
+        var messages = ctx.GetValidationMessages();
+        foreach (var m in messages)
+            Console.WriteLine($"Validation error: {m}");
     }
 }

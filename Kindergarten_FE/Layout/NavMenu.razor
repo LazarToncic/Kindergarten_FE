@@ -30,11 +30,11 @@
                 <span class="bi bi-list-nested-nav-menu" aria-hidden="true"></span> Login
             </NavLink>
         </div>
-        @if (ShouldShowCreateParentRequest)
+        @if (IsLoggedIn)
         {
             <div class="nav-item px-3">
                 <NavLink class="nav-link" href="/CreateParentRequest">
-                    <span class="bi bi-person-plus-fill-nav-menu" aria-hidden="true"></span> Create Parent Request
+                    <span class="bi bi-person-plus-fill-nav-menu"></span> Create Parent Request
                 </NavLink>
             </div>
         }
@@ -55,7 +55,6 @@
     private bool collapseNavMenu = true;
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-    private bool ShouldShowCreateParentRequest = false;
     private bool IsLoggedIn = false;
 
     protected override async Task OnInitializedAsync()
@@ -66,7 +65,6 @@
     
     private async Task RefreshNav()
     {
-        ShouldShowCreateParentRequest = await UserRoleService.HasRoleAsync(RoleExtensions.Parent);
         IsLoggedIn = await UserRoleService.HasAnyRoleAsync();
         StateHasChanged();
     }

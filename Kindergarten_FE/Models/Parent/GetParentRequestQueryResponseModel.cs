@@ -1,0 +1,3 @@
+namespace Kindergarten_FE.Models.Parent;
+
+public record GetParentRequestQueryResponseModel(List<GetParentRequestSingleChildResponseModel> ParentRequests);
