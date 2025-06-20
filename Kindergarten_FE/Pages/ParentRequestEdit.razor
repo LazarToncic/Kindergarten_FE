@@ -1,0 +1,95 @@
+@page "/Parent/ParentRequests/Edit/{ParentRequestId:guid}"
+@using Kindergarten_FE.Common.Dtos.Parent
+@inject IParentRequestService ParentRequestService
+@inject NavigationManager Nav
+<h3>ParentRequestEdit</h3>
+
+@if (request == null)
+{
+    <p>Loading...</p>
+}
+else
+{
+    <RadzenCard Style="margin:1rem; padding:1rem; max-width:600px">
+        <div><strong>First Name:</strong> @request.FirstName</div>
+        <div><strong>Last Name:</strong> @request.LastName</div>
+        <div><strong>Email:</strong> @request.Email</div>
+        <div><strong>Phone:</strong> @request.PhoneNumber</div>
+        <div><strong>Kindergarten:</strong> @request.KindergartenName</div>
+        <div><strong>Relation:</strong> @request.ParentChildRelationship</div>
+        <div><strong>Submitted:</strong> @request.CreatedAt:g</div>
+
+        <h4 style="margin-top:1rem">Children</h4>
+        <RadzenDataGrid Data="@request.ChildrenJson"
+                        TItem="ParentRequestChildDto"
+                        Style="margin-bottom:1rem"
+                        AllowPaging="false">
+            <Columns>
+                <RadzenDataGridColumn Property="FirstName" Title="First Name" />
+                <RadzenDataGridColumn Property="LastName"  Title="Last Name" />
+                <RadzenDataGridColumn Property="DateOfBirth" Title="Date Of Birth" FormatString="{0:d}" />
+                <RadzenDataGridColumn Title="Allergies">
+                    <Template Context="child">
+                        @foreach (var a in child.Allergies ?? Enumerable.Empty<string>())
+                        {
+                            <div style="white-space: normal; word-break: break-word;">
+                                @a
+                            </div>
+                        } 
+                    </Template>
+                </RadzenDataGridColumn>
+                <RadzenDataGridColumn Title="Medical">
+                    <Template Context="child">
+                        @foreach (var a in child.MedicalConditions ?? Enumerable.Empty<string>())
+                        {
+                            <div style="white-space: normal; word-break: break-word;">
+                                @a
+                            </div>
+                        }
+                    </Template>
+                </RadzenDataGridColumn>
+            </Columns>
+        </RadzenDataGrid>
+
+        <div style="display:flex; gap:1rem; margin-top:1rem">
+            <RadzenButton Text="@(request.IsOnlineApproved ? "APPROVED" : "Approve Online")"
+                          ButtonStyle="@(request.IsOnlineApproved ? ButtonStyle.Secondary : ButtonStyle.Success)"
+                          Disabled="@request.IsOnlineApproved"
+                          Click="@ApproveOnline" />
+
+            <RadzenButton Text="@(request.IsInPersonApproved ? "APPROVED" : "Approve In-Person")"
+                          ButtonStyle="@(request.IsInPersonApproved ? ButtonStyle.Secondary : ButtonStyle.Success)"
+                          Disabled="@request.IsInPersonApproved"
+                          Click="@ApproveInPerson" />
+        </div>
+
+        <div style="margin-top:1rem">
+            <RadzenButton Text="Back to List"
+                          ButtonStyle="ButtonStyle.Light"
+                          Click="@(()=>Nav.NavigateTo("/Parent/ParentRequests"))" />
+        </div>
+    </RadzenCard>
+}
+
+@code {
+    [Parameter]
+    public Guid ParentRequestId { get; set; }
+    GetParentRequestSingleChildResponseModel? request;
+    
+    protected override async Task OnInitializedAsync()
+    {
+        request = await ParentRequestService.GetParentRequestByIdAsync(ParentRequestId);
+    }
+    
+    private  async Task ApproveOnline()
+    {
+        await ParentRequestService.ApproveOnlineParentRequestAsync(ParentRequestId);
+        request = await ParentRequestService.GetParentRequestByIdAsync(ParentRequestId);
+    }
+
+    private async Task ApproveInPerson()
+    {
+        await ParentRequestService.ApproveInPersonParentRequestAsync(ParentRequestId);
+        request = await ParentRequestService.GetParentRequestByIdAsync(ParentRequestId);
+    }
+}

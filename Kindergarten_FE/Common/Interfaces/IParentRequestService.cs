@@ -8,6 +8,8 @@ public interface IParentRequestService
 {
     Task CreateParentRequest(int numberOfChildren, ParentChildRelationship parentChildRelationship,
         string? additionalInfo, string preferredKindergarten, List<ChildModel> Children);
-
     Task<List<GetParentRequestSingleChildResponseModel>> GetParentRequestsAsync(GetParentRequestQueryModel query);
+    Task<GetParentRequestSingleChildResponseModel> GetParentRequestByIdAsync(Guid id);
+    Task ApproveOnlineParentRequestAsync(Guid id);
+    Task ApproveInPersonParentRequestAsync(Guid id);
 }

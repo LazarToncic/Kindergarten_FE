@@ -58,16 +58,39 @@ public class ParentRequestService(HttpClient http) : IParentRequestService
         if (query.IsInPersonApproved.HasValue)
             queryParams["Dto.IsInPersonApproved"] = query.IsInPersonApproved.Value.ToString();
 
-        // PageNumber i PageSize uvek šaljemo, ili uz default vrednosti
         queryParams["Dto.PageNumber"] = (query.PageNumber > 0 ? query.PageNumber : 1).ToString();
         queryParams["Dto.PageSize"]   = (query.PageSize   > 0 ? query.PageSize   : 10).ToString();
 
-        // Sastavimo URL sa query-stringom
         var url = QueryHelpers.AddQueryString(ApiRoutes.GetParentRequests, queryParams);
 
-        // Pozovemo GET i parsiramo JSON odgovor
         var wrapper = await http.GetFromJsonAsync<GetParentRequestQueryResponseModel>(url);
         return wrapper?.ParentRequests
                ?? new List<GetParentRequestSingleChildResponseModel>();
+    }
+
+    public async Task<GetParentRequestSingleChildResponseModel> GetParentRequestByIdAsync(Guid id)
+    {
+        var response = await http.GetFromJsonAsync<GetParentRequestSingleChildResponseModel>($"{ApiRoutes.GetParentRequest}?Id={id}");
+        if (response == null)
+            throw new InvalidOperationException("Parent request with id not found.");
+        
+        return response;
+    }
+
+    public async Task ApproveOnlineParentRequestAsync(Guid id)
+    {
+        var url = QueryHelpers.AddQueryString(ApiRoutes.ApproveParentRequestOnline,
+            new Dictionary<string, string?>{ ["ParentRequestId"] = id.ToString() });
+
+        var response = await http.PostAsync(url, null);
+        response.EnsureSuccessStatusCode();
+    }
+
+    public async Task ApproveInPersonParentRequestAsync(Guid id)
+    {
+        var url = QueryHelpers.AddQueryString(ApiRoutes.ApproveParentRequestInPerson, 
+            new Dictionary<string, string?> { ["ParentRequestId"] = id.ToString() });
+        var response = await http.PostAsync(url, null);
+        response.EnsureSuccessStatusCode();
     }
 }

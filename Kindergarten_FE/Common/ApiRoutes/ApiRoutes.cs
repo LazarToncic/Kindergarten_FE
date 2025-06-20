@@ -10,5 +10,8 @@ public static class ApiRoutes
     public const string GetKindergartenNamesAndIds = "Kindergarten/GetKindergartensInf";
     public const string SendParentRequest = "Parent/SendParentRequest";
     public const string GetParentRequests = "Parent/GetParentRequests";
-    public const string EditParentRequest = "Parent/ParentRequests/Edit/";
+    public const string GetParentRequest = "Parent/GetParentRequest";
+    public const string EditParentRequest = "Parent/ParentRequests/Edit";
+    public const string ApproveParentRequestOnline = "Parent/ApproveParentRequestOnline";
+    public const string ApproveParentRequestInPerson = "Parent/ApproveParentRequestInPerson";
 }
